@@ -1,0 +1,80 @@
+{% extends 'index.html' %}
+<title>{% block title %} Kigalilife -Home{% endblock %}</title>
+{% block body %}
+<div class="border">
+    <div id="bg">
+        background
+    </div>
+    <div class="page">
+        {% block sidebar %}
+        <div class="sidebar">
+            {% block logo %}
+            <a href="/" id="logo"><img src="/static/images/logo.png" alt="logo"></a>
+            {% endblock %}
+
+            {% block menu %}
+           {{ super() }}
+            {% endblock %}
+            {% block footer %}
+            <form action="#">
+                <span>Signup to Join the group</span>
+                <input type="text" onClick="this.value='';" onFocus="this.select()" onBlur="this.value=!this.value?'Enter Valid Email Address':this.value;" value="Enter Valid Email Address">
+                <input type="submit" id="submit" value="submit">
+            </form>
+            <div class="connect">
+                <a href="#" id="facebook">facebook</a> <a href="#" id="twitter">twitter</a> <a href="#" id="googleplus">youtube</a>
+            </div>
+            <p>
+                Copyright 2014
+            </p>
+            <p>
+                Kigali life
+            </p>
+        </div>
+        {% endblock %}
+        {% endblock %}
+
+        {% block content %}
+
+        <div class="body">
+            <div class="contact">
+                <h2>About Me</h2>
+                <p>
+                    My name is Ventum, and I am currently living in my favorite city: Kigali!
+                    I’m originally from Rwanda, Gisenyi, where the majority of my days were spent running track and driving to the Bralirwa to buy Primus.
+                    I then moved to Butare/Huye where I spent four arduous years at National University of Rwanda before graduating in 2012. With my diploma in a vice grip,
+                    I set out to explore what one of my friends once called “Iwabo w'abasalo”- which is apparently the capital of Rwanda.
+                </p>
+                <p>
+                    This blog is my excuse to get to know people. It is a chance for me to get exposure.
+                    Most importantly, it is an opportunity for you and I to discover Kigali together.
+                    <br/><br/>
+                    Here’s to the journey,
+                </p>
+               
+                <p>
+                    Interested in my photography or writing services? Want to contact me about random stuff?
+                </p>
+
+                <form action="#">
+                    <label for="firstname">First Name</label>
+                    <input type="text" id="firstname">
+                    <label for="lastname">Last Name</label>
+                    <input type="text" id="lastname">
+                    <label for="email">Email Address</label>
+                    <input type="text" id="email">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject">
+                    <label for="message">Message</label>
+                    <textarea name="" cols="30" rows="10" id="message"></textarea>
+                    <input type="submit" id="submit2" value="">
+                </form>
+            </div>
+        </div>
+        {% endblock %}
+    </div>
+</div>
+{% endblock %}
+
+
+

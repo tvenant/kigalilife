@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <title>
+    {% block title %}{% endblock %}
+    </title>
+    {% block styles %}
+	<link rel="stylesheet" href="/static/css/base.css" type="text/css"/>
+    {% endblock %}
+</head>
+<body>
+{% block body %}
+            <!--sidebar-->
+            {% block sidebar %}
+                <!--logo-->
+                {% block logo %}
+                {% endblock %}
+                <!--end logo-->
+
+                <!--menu-->
+				{% block menu %}
+                {% endblock %}
+                <!--end menu-->
+
+                <!--footer-->
+                {% block footer %}
+                {% endblock %}
+                <!--end footer-->
+
+            {% endblock %}
+            <!--end sidebar-->
+
+            <!--content-->
+            {% block content %}
+            {% endblock %}
+            <!--end content-->
+{% endblock %}
+</body>
+</html>

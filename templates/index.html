@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+{% block title %} Kigalilife -Home{% endblock %}
+{% block body %}
+<div class="border">
+    <div id="bg">
+        background
+    </div>
+    <div class="page">
+        {% block sidebar %}
+        <div class="sidebar">
+            {% block logo %}
+            <a href="/" id="logo"><img src="../static/images/logo.png" alt="logo"></a>
+            {% endblock %}
+
+            {% block menu %}
+            <ul>
+                <li class="selected">
+                    <a href="/">Home</a>
+                </li>
+                <li>
+                    <a href="/about-us">About</a>
+                </li>
+
+                <li>
+                    <a href="/people">People</a>
+                </li>
+                <li>
+                    <a href="/fashion">Fashion</a>
+                </li>
+
+            </ul>
+            {% endblock %}
+            {% block footer %}
+            <form action="#">
+                <span>Signup to Join the group</span>
+                <input type="text" onClick="this.value='';" onFocus="this.select()" onBlur="this.value=!this.value?'Enter Valid Email Address':this.value;" value="Enter Valid Email Address">
+                <input type="submit" id="submit" value="submit">
+            </form>
+            <div class="connect">
+                <a href="#" id="facebook">facebook</a> <a href="#" id="twitter">twitter</a> <a href="#" id="googleplus">youtube</a>
+            </div>
+            <p>
+                Copyright 2014
+            </p>
+            <p>
+                Kigali life
+            </p>
+        </div>
+        {% endblock %}
+        {% endblock %}
+
+        {% block content %}
+
+        <div class="body">
+            <div>
+                <h2>Welcome to Kigalilife Blog</h2>
+                <time >October 21, 2013</time>
+                <img src="static/images/kigali1.jpg" alt="">
+                <p>When I heard from my roommate that Kigali is growing day and night, I decided to go.
+                    The town has a reputation for great people and smartness, and is a favorite among my Kigali friends.
+                    Such a first impression was more than enough to spend there my hole life, and I excitedly find there so many opportunities.</p>
+                <br/>
+                <img src="static/images/kigali_gare.jpg" alt="">
+                <p>
+
+                    At Nyabugogo bus station, people are busy moving around and around, doing business especially taxi-men
+                    transporting people all over provinces of the country
+                </p>
+                <div>
+                </div>
+            </div>
+        </div>
+        {% endblock %}
+    </div>
+</div>
+{% endblock %}
+

@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+{% block title %} Kigalilife -Home{% endblock %}
+{% block body %}
+<div class="border">
+    <div id="bg">
+        background
+    </div>
+    <div class="page">
+        {% block sidebar %}
+        <div class="sidebar">
+            {% block logo %}
+            <a href="/" id="logo"><img src="/static/images/logo.png" alt="logo"></a>
+            {% endblock %}
+
+            {% block menu %}
+            <ul>
+                <li class="selected">
+                    <a href="/">Home</a>
+                </li>
+                <li>
+                    <a href="/about-us">About</a>
+                </li>
+
+                <li>
+                    <a href="/people">People</a>
+                </li>
+                <li>
+                    <a href="/fashion">Fashion</a>
+                </li>
+
+            </ul>
+            {% endblock %}
+            {% block footer %}
+            <form action="#">
+                <span>Signup to Join the group</span>
+                <input type="text" onClick="this.value='';" onFocus="this.select()" onBlur="this.value=!this.value?'Enter Valid Email Address':this.value;" value="Enter Valid Email Address">
+                <input type="submit" id="submit" value="submit">
+            </form>
+            <div class="connect">
+                <a href="#" id="facebook">facebook</a> <a href="#" id="twitter">twitter</a> <a href="#" id="googleplus">youtube</a>
+            </div>
+            <p>
+                Copyright 2014
+            </p>
+            <p>
+                Kigali life
+            </p>
+        </div>
+        {% endblock %}
+        {% endblock %}
+
+        {% block content %}
+
+        <div class="body">
+            <div>
+                <h2>People in Kigali</h2>
+
+                <img src="/static/images/people1.jpg" alt="">
+                <p>
+                    people in Rwanda like relaxing in a live music.
+                    Here a popular troup was performing  on Friday night in Kigali city
+                </p>
+                <img src="/static/images/people2.jpg" alt="">
+                <p>
+                    Stars in Rwanda have a lovely competition about Primus Gumama Super Star.
+                    most of all fans were going to support their stars
+                </p>
+                <img src="/static/images/people3.jpg" alt="">
+
+
+                <div>
+                </div>
+            </div>
+        </div>
+        {% endblock %}
+    </div>
+</div>
+{% endblock %}
+

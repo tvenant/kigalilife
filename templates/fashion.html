@@ -1,0 +1,58 @@
+{% extends 'index.html' %}
+{% block title %} Kigalilife -Home{% endblock %}
+{% block body %}
+<div class="border">
+    <div id="bg">
+        background
+    </div>
+    <div class="page">
+        {% block sidebar %}
+        <div class="sidebar">
+            {% block logo %}
+            <a href="/kigalilife" id="logo"><img src="../static/images/logo.png" alt="logo"></a>
+            {% endblock %}
+
+            {% block menu %}
+            {{ super() }}
+            {% endblock %}
+            {% block footer %}
+            <form action="#">
+                <span>Signup to Join the group</span>
+                <input type="text" onClick="this.value='';" onFocus="this.select()" onBlur="this.value=!this.value?'Enter Valid Email Address':this.value;" value="Enter Valid Email Address">
+                <input type="submit" id="submit" value="submit">
+            </form>
+            <div class="connect">
+                <a href="#" id="facebook">facebook</a> <a href="#" id="twitter">twitter</a> <a href="#" id="googleplus">youtube</a>
+            </div>
+            <p>
+                Copyright 2014
+            </p>
+            <p>
+                Kigali life
+            </p>
+        </div>
+        {% endblock %}
+        {% endblock %}
+
+        {% block content %}
+
+        <div class="body">
+            <div>
+                <h2>People in Kigali</h2>
+
+                <img src="/static/images/fashion1.jpg" alt="">
+                <img src="/static/images/fashion2.jpg" alt="">
+                <img src="/static/images/fashion3.jpg" alt="">
+                <img src="/static/images/fashion4.jpg" alt="">
+                <img src="/static/images/fashion5.jpg" alt="">
+                <img src="/static/images/fashion6.jpg" alt="">
+
+                <div>
+                </div>
+            </div>
+        </div>
+        {% endblock %}
+    </div>
+</div>
+{% endblock %}
+
